@@ -1,0 +1,114 @@
+.login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+    min-height: calc(100vh - 20vh);
+}
+.login--container{
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 2px solid #eee;
+    border-radius: 40px;
+    padding: 40px;
+    color: #eee;
+    min-height: 550px;
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.login--container h2{
+    font-size: 24px;
+    text-align: center;
+    margin-top: -10px;
+
+}
+
+.login--container_form{
+    display: flex;
+    flex-direction: column;
+}
+.form--input {
+    margin-bottom: 15px;
+    border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+    padding: 0.5rem;
+    padding-left: 1rem;
+    font-size: 14px;
+    transition: all 150ms;
+    color: rgb(255, 255, 255);
+
+}
+::placeholder{
+    color: rgb(165, 165, 165);
+}
+.form--input:focus{
+    outline: none;
+}
+.form--input:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+.form--checkbox {
+    margin: 6px 0 30px;
+    font-size: 15px;
+}
+#remember:hover{
+    cursor: pointer;
+}
+.button {
+    background-color: rgb(38, 48, 146);
+    color: white;
+    font-size: 17px;
+    padding: 8px;
+    border: transparent;
+    border-radius: 8px;
+    border-bottom: 2px solid rgb(36, 35, 35);
+    border-right: 2px solid rgb(36, 35, 35);
+    box-sizing: border-box;
+    transition: all 0.2s;
+}
+
+.button:hover{
+    cursor: pointer;
+    transform: translateY(-3px);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    
+}
+.button:active{
+    transform: translateY(1px);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);;
+
+}
+
+.login--container  a:hover{
+    text-decoration: underline;
+}
+.login--container_socialmedia div a{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin: 10px 0;
+}
+.login--container_socialmedia div a img{
+    height: 32px;
+    margin-right: 10px;
+}
+.login--container_forgetpass {
+    margin-top: 30px;
+    font-size: 15px;
+}
+.login--container_forgetpass{
+    text-align: center;
+}
+@media only screen and (max-width: 600px){
+    .login--container{
+        border: none;
+        background-color: transparent;
+        padding: 0;
+    }
+}

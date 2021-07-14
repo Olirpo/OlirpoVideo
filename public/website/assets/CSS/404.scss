@@ -1,0 +1,70 @@
+$green: rgb(66, 184, 131);
+$blue: rgb(53, 73, 94);
+@mixin circle($color, $animation_name, $animation_time){
+    animation: $animation_name $animation_time linear infinite;
+    border: 6px solid $color;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+main{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff3d;
+    text-align: center;
+    margin: 0 8px;
+}
+.container-404{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 150px;
+    align-items: center;
+    animation: pulse 5s ease-in-out infinite;
+    font-weight: 900;
+}
+.loader-container{
+    height: 100px;
+    width: 100px;
+    position: relative
+}
+.loader1{
+    @include circle($green, loader1, 1.2s);
+    height: 100%;
+    width: 100%;
+//    animation: loader1 1.2s linear infinite;
+}
+.loader2{
+    @include circle($blue, loader2, 1.8s);
+    height: 70%;
+    width: 70%;
+}
+
+@keyframes loader1{
+    0%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+@keyframes loader2 {
+    0%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%, -50%) rotate(-360deg);
+    }
+    
+}
+@keyframes pulse {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.08);}
+    100% {transform: scale(1);}
+}
